@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Главная</title>
+        <link rel="stylesheet" href="css/sidemenu.css">
+        <link rel="stylesheet" href="css/admin.css">
+    </head>
+<body>
+    
+    <div class="content-section">
+        <div class="content">
+            <div class="container-header">
+                <div class="header-wrapper">
+                    <h1 class="header-wrapper-text">Администраторская панель</h2>
+                </div>
+            </div>
+            <div class="container-booking">
+                <div class="box-tables-list">
+                    <div class="box-header">
+                        <p class="header-text">Список столов</p>
+                    </div>
+                    <div class="box-list">
+                        <div class="list-item">
+                            <div class="list-item-text number">№4</div>
+                            <div class="list-item-text time">19:00</div>
+                            <div class="list-item-text client">Валерий</div>
+                            <div class="list-item-text phone">+79272339292</div>
+                            <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-text number">№4</div>
+                            <div class="list-item-text time">19:00</div>
+                            <div class="list-item-text client">Коларпвлрпвлоап</div>
+                            <div class="list-item-text phone">+79272339292</div>
+                            <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-text number">№4</div>
+                            <div class="list-item-text time">19:00</div>
+                            <div class="list-item-text client">Валерий</div>
+                            <div class="list-item-text phone">+79272339292</div>
+                            <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
+                        </div>
+                        <div class="list-item">
+                            <div class="list-item-text number">№4</div>
+                            <div class="list-item-text time">19:00</div>
+                            <div class="list-item-text client">Валерий</div>
+                            <div class="list-item-text phone">+79272339292</div>
+                            <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="admin-edit-popup" class="popup popup__admin-edit-popup">
+        <div class="popup-body popup-body__admin-edit-popup">
+            <div class="popup-content">
+                <div class="popup-title">Выберите дату и время визита:</div>
+                <div class="input-form">
+                    <input type="date" id="admin-date" class="input-form-date-value" min="2022-11-17" max="2022-12-31">
+                    <input type="time" id="admin-time" class="input-form-time-value" min="09:00" max="21:00" required>
+                </div>
+                <div class="popup-сontent-buttons">
+                    <button id="close-btn" class="content-button close-btn close-btn__admin-edit-popup">Закрыть</button>
+                    <button class="content-button submit-btn submit-btn___admin-edit-popup" type="submit">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+     </div>   
+
+     <div id="admin-create-popup" class="popup popup__admin-create-popup">
+        <div class="popup-body popup-body__admin-create-popup">
+            <div class="popup-content">
+                <div class="popup-title">Выберите дату и время визита:</div>
+                <div class="input-form">
+                    <input type="date" id="admin-date" class="input-form-date-value" min="2022-11-17" max="2022-12-31">
+                    <input type="time" id="admin-time" class="input-form-time-value" min="09:00" max="21:00" required>
+                </div>
+                <div class="popup-сontent-buttons">
+                    <button id="close-btn" class="content-button close-btn close-btn__admin-create-popup">Закрыть</button>
+                    <button class="content-button submit-btn submit-btn___admin-create-popup" type="submit">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+     </div> 
+
+     <div id="admin-delete-popup" class="popup popup__admin-delete-popup">
+        <div class="popup-body popup-body__admin-delete-popup">
+            <div class="popup-content">
+                <div class="popup-title">Подтвердите удаление бронирования</div>
+                <div class="popup-сontent-buttons">
+                    <button id="close-btn" class="content-button close-btn close-btn__admin-delete-popup">Закрыть</button>
+                    <button class="content-button submit-btn submit-btn___admin-delete-popup" type="submit">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+     </div> 
+
+     <script src="node_modules\jquery\dist\jquery.min.js"></script>
+<script src="adminScript.js"></script>
+
+</body>
+</html>
