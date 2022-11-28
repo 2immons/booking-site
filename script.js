@@ -1,14 +1,21 @@
-function showLoginForm() {
-    document.getElementById('login-form').style.display = "flex";
-    document.getElementById('login-form').style.flexDirection = "column";
-    document.getElementById('register-form').style.display = "none"
- }
+let loginBtn = $('.login-form-open-btn');
+let regBtn = $('.register-form-open-btn');
 
- function showRegisterForm() {
-    document.getElementById('register-form').style.display = "flex";
-    document.getElementById('register-form').style.flexDirection = "column";
-    document.getElementById('login-form').style.display = "none"
- }
+$(document).on("click", function(e){
+   if(loginBtn.is(e.target)){
+      document.querySelector('.side-menu__login-form').style.display = "flex";
+      document.querySelector('.side-menu__login-form').style.flexDirection = "column";
+      document.querySelector('.side-menu__register-form').style.display = "none"
+   }
+
+   if(regBtn.is(e.target)){
+      document.querySelector('.side-menu__register-form').style.display = "flex";
+      document.querySelector('.side-menu__register-form').style.flexDirection = "column";
+      document.querySelector('.side-menu__login-form').style.display = "none"
+   }
+})
+
+// слайдер
 
 let offset = 0;
 const sliderLine = document.querySelector('.slider-line');

@@ -2,128 +2,157 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Главная</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/sidemenu.css">
     </head>
 <body>
     
-    <button class="menu-button">  
+    <div class="menu-button">
         <span class="menu-button-item"></span>
-		<span class="menu-button-item"></span>
-		<span class="menu-button-item"></span>
-    </button>  
+        <span class="menu-button-item"></span>
+        <span class="menu-button-item"></span>
+    </div>
 
-    <aside class="side-menu">
-        <div class="upper-part">
-            <div class="logo">
-                <a href="index.html" class="logo-text">нир</a>
-            </div>
-            <div class="navbar">
-                <div class="navbar-item">
-                    <a href="index.html" class="navlink">меню</a>
-                </div>
-                <div class="navbar-item">
-                    <a href="booking.html" class="navlink">забронировать</a>
-                </div>
-                <div class="navbar-item">
-                    <a href="index.html" class="navlink">контакты</a>
-                </div>
-            </div>
-        </div>
-        <div class="user-login-form">
-            <div class="login-button-container">
-                <button class="login-form-button login-button">Войти</button>
-            </div>
-            <div class="register-button-container">
-                <button class="login-form-button create-account-button">Создать аккаунт</button>
-            </div>
-            <div class="login-form" id="login-form">
-                <div class="login-form-inputs">
-                    <input type="tel" class="login-value" placeholder="Телефон">
-                    <input type="password" class="password" placeholder="Пароль">
-                </div>
-                <button class="login-button2">Войти</button>
-            </div>
-            <div class="register-form" id="register-form">
-                <div class="register-form-inputs">
-                    <input type="tel" class="login-value" placeholder="Телефон">
-                    <input type="text" class="password" placeholder="Пароль">
-                    <input type="text" class="password" placeholder="Подтвердите пароль">
-                </div>
-                <button class="register-button">Зарегистрироваться</button>
-            </div>
-        </div>
-        
-    </aside>
+    <div class="wrapper">
+        <aside class="side-menu">
 
-    <div class="content-section">
-        <div class="content">
-            <div class="container container__header">
-                <div class="header-wrapper">
-                    <h1 class="header-wrapper-text">НИР — первый ресторан д</h2>
+            <div class="side-menu__logo-and-navbar">
+                <div class="side-menu__logo">
+                    <a href="index.html" class="logo-text">нир</a>
                 </div>
-            </div>
-
-            <div class="container container__about-us">
-                <div class="box box__about-us">
-                    <div class="box-header">
-                        <p class="header-text header-text__about-us">О нас</p>
+                <div class="side-menu__navbar">
+                    <div class="side-menu__navbar-item">
+                        <a href="index.html" class="nav-link nav-link--menu">меню</a>
                     </div>
-                    <div class="box-content box-content__about-us">
-                        <div class="text-wrapper text-wrapper__about-us">
-                            <p class="text">
-                                Nunc dictum ante ut neque porttitor, vitae congue urna euismod. Suspendisse vitae augue eget eros commodo maximus. Nunc vitae maximus ex. Nunc dictum ante ut neque porttitor, vitae congue urna euismod. Suspendisse vitae augue eget eros commodo maximus. Nunc vitae maximus ex.
-                            </p>
+                    <div class="side-menu__navbar-item">
+                        <a href="booking.html" class="nav-link nav-link--booking">забронировать</a>
+                    </div>
+                    <div class="side-menu__navbar-item">
+                        <a href="index.html" class="nav-link nav-link--contacts">контакты</a>
+                    </div>
+                    <div class="side-menu__navbar-item">
+                        <a href="admin.html" class="nav-link nav-link--admin">админ-панель</a>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="side-menu__user-login">
+                <div class="side-menu__login-button-wrapper">
+                    <button class="login-form-open-btn">Войти</button>
+                </div>
+                <div class="side-menu__register-button-wrapper">
+                    <button class="register-form-open-btn">Создать аккаунт</button>
+                </div>
+                <div class="side-menu__login-form">
+                    <div class="side-menu__login-form-inputs">
+                        <input type="tel" class="input-value input-value--login-value" placeholder="Телефон">
+                        <input type="password" class="input-value input-value--password" placeholder="Пароль">
+                    </div>
+                    <div class="side-menu__login-form-button-wrapper">
+                        <button class="login-btn-confirm">Войти в аккаунт</button>
+                    </div>
+                </div>
+                <div class="side-menu__register-form">
+                    <div class="side-menu__register-form-inputs">
+                        <input type="text" class="input-value input-value--name-value" placeholder="Имя">
+                        <input type="tel" class="input-value input-value--login-value" placeholder="Телефон">
+                        <input type="text" class="input-value input-value--password" placeholder="Пароль">
+                        <input type="text" class="input-value input-value--password" placeholder="Подтвердите пароль">
+                    </div>
+                    <div class="side-menu__register-form-button-wrapper">
+                        <button class="create-account-btn-confirm">Зарегистрироваться</button>
+                    </div>
+                </div>
+                <div class="side-menu__errors">
+                    <div class="side-menu__error side-menu__error--wrong-data">
+                        <p class="error-text error-text--wrong-data">Неверный логин или пароль!</p>
+                        
+                    </div>
+                    <div class="side-menu__error side-menu__error--wrong-format">
+                        <p class="error-text error-text--wrong-format">Некорректный ввод!</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    
+        <main class="main">
+            <header class="main-header">
+                <div class="main-header__background-image">
+                    <div class="container">
+                        <div class="main-header__header-wrapper">
+                            <h1 class="main-header__header-text">НИР — ресторан локальной кухни</h2>
                         </div>
-                        <div class="info-image image__about-us">
-                            <img class="about-img" src="img/DudII9t.png" width="478px" height="312px" alt="">
-                        </div>
                     </div>
                 </div>
-            </div>
-        
-            <div class="container container__photo-slider">
-                <div class="box box__photo-slider">
-                    <div class="box-header">
-                        <p class="header-text header-text__photo-slider">Галерея</p>
-                    </div>
-                    <div class="slider-wrapper">
-                        <button class="slider-button slider-prev"><img src="img/leftarrow.png" alt=""></button>
-                            <div class="slider">
-                                <div class="slider-line">
-                                    <img src="img/ef2f7da069bcbc7eab510bd2b5572334.jpg" alt="" height="550" width="900">
-                                    <img src="img/ef2f7da069bcbc7eab510bd2b5572334.jpg" alt="" height="550" width="900">
-                                    <img src="img/ef2f7da069bcbc7eab510bd2b5572334.jpg" alt="" height="550" width="900">
-                                    <img src="img/ef2f7da069bcbc7eab510bd2b5572334.jpg" alt="" height="550" width="900">
-                                
-                                </div>
+            </header>
+    
+            <div class="content">
+                
+                <div class="section section--about-us">
+                    <div class="container">
+                        <div class="section__header section__header--about-us">
+                            <h2 class="section__header-text section__header-text--about-us">О нас</p>
+                        </div>
+                        <div class="section__content section__content--about-us">
+                            <div class="section__content-img-wrapper section__content-img-wrapper--about-us">
+                                <img class="info-img
+                                " src="img/aboutus.jpg" alt="">
                             </div>
-                    <button class="slider-button slider-next"><img src="img/rightarrow.png.png" alt=""></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container container__about-kitchen">
-                <div class="box box__about-kichen">
-                    <div class="box-header">
-                        <h3 class="header-text header-text__about-kitchen">Кухня</h3>
-                    </div>
-                    <div class="box-content box-content__about-kitchen">
-                        <div class="text-wrapper text-wrapper__about-kitchen">
-                            <p class="text">
-                                Nunc dictum ante ut neque porttitor, vitae congue urna euismod. Suspendisse vitae augue eget eros commodo maximus. Nunc vitae maximus ex. Nunc dictum ante ut neque porttitor, vitae congue urna euismod. Suspendisse vitae augue eget eros commodo maximus. Nunc vitae maximus ex. Donec pharetra velit sed lobortis posuere. 
-                            </p>
-                        </div>
-                        <div class="info-image image__about-us">
-                            <img class="about-img" src="img/DudII9t.png" width="478px" height="312px" alt="">
+                            <div class="section__content-text-wrapper section__content-text-wrapper--about-us">
+                                <p class="text">
+                                    Nunc dictum ante ut neque porttitor, vitae congue urna euismod. Suspendisse vitae augue eget eros commodo maximus. Nunc vitae maximus ex. Nunc dictum ante ut neque porttitor, vitae congue urna euismod. Suspendisse vitae augue eget eros commodo maximus. Nunc vitae maximus ex.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-          
+    
+                <div class="section section--photo-slider">
+                    <div class="container">
+                        <div class="section__header section__header--photo-slider">
+                            <h2 class="section__header-text section__header-text--photo-slider">Галерея</p>
+                        </div>
+                        <div class="section-content section-content--photo-slider">
+                            <div class="section-content__slider-wrapper">
+                                <button class="slider-button slider-prev"><img src="img/leftarrow.png" alt=""></button>
+                                    <div class="slider">
+                                        <div class="slider-line">
+                                            <img src="img/ef2f7da069bcbc7eab510bd2b5572334.jpg" alt="" height="550" width="900">
+                                            <img src="img/ef2f7da069bcbc7eab510bd2b5572334.jpg" alt="" height="550" width="900">
+                                            <img src="img/ef2f7da069bcbc7eab510bd2b5572334.jpg" alt="" height="550" width="900">
+                                            <img src="img/ef2f7da069bcbc7eab510bd2b5572334.jpg" alt="" height="550" width="900">
+                                        
+                                        </div>
+                                    </div>
+                                <button class="slider-button slider-next"><img src="img/rightarrow.png.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="section section--about-kitchen">
+                    <div class="container">
+                        <div class="section__header section__header--about-kichen">
+                                <h2 class="section__header-text section__header-text--about-kitchen">О кухне</h2>
+                        </div>
 
-            <div class="footer">
+                        <div class="section__content section__content--about-kitchen">
+                            <div class="section__content-img-wrapper section__content-img-wrapper--about-kitchen">
+                                <img class="info-img" src="img/WysFNM9.png" alt="">
+                            </div>
+                            <div class="section__content-text-wrapper section__content-text-wrapper--about-kitchen">
+                                <p class="text">
+                                    Nunc dictum ante ut neque porttitor, vitae congue urna euismod. Suspendisse vitae augue eget eros commodo maximus. Nunc vitae maximus ex. Nunc dictum ante ut neque porttitor, vitae congue urna euismod. Suspendisse vitae augue eget eros commodo maximus. Nunc vitae maximus ex.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <footer class="footer">
                 <div class="footer-container">
                     <div class="contactsf">
                         <p class="contacts-text">ул. Московская, 122/126</p>
@@ -142,11 +171,10 @@
                         <a href="" class="item"><img src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" width="40px" height="40px" alt=""></a>
                     </div>
                 </div>
-            </div>
-        </div>
+            </footer>
+
+        </main>
     </div>
-    
-</div>
 
 <script src="node_modules\jquery\dist\jquery.min.js"></script>
 <script src="script.js"></script>

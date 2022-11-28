@@ -2,58 +2,93 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Главная</title>
-        <link rel="stylesheet" href="css/sidemenu.css">
         <link rel="stylesheet" href="css/admin.css">
     </head>
 <body>
     
-    <div class="content-section">
-        <div class="content">
-            <div class="container-header">
-                <div class="header-wrapper">
-                    <h1 class="header-wrapper-text">Администраторская панель</h2>
+    <div class="wrapper">
+        <div class="main-admin">
+            <div class="content">
+
+                <div class="section section--admin">
+                    <div class="container">
+                        <div class="section__header section__header--admin">
+                            <h2 class="section__header-text section__header-text--admin">Администраторская панель</p>
+                        </div>
+                        <div class="section__content section__content--admin">
+                            
+                                <div class="date-selection-form">
+                                    <div class="to-main-page-wrapper">
+                                        <a href="/index.html" class="to-main-page-a">Вернуться назад</a>
+                                    </div>
+                                    <div class="input-form-button-wrapper">
+                                        <button data-id="date-popup" class="date-popup-open-btn">Выбрать дату</button>
+                                    </div>
+                                </div>
+                                <div class="box-list">
+                                    <div class="list-item">
+                                        <div class="list-item-text number">Стол</div>
+                                        <div class="list-item-text time">Время</div>
+                                        <div class="list-item-text client">Имя</div>
+                                        <div class="list-item-text phone">Телефон</div>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="list-item-text number">№4</div>
+                                        <div class="list-item-text time">19:00</div>
+                                        <div class="list-item-text client">Валерий</div>
+                                        <div class="list-item-text phone">+79272339292</div>
+                                        <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="list-item-text number">№4</div>
+                                        <div class="list-item-text time">19:00</div>
+                                        <div class="list-item-text client">Коларпвлрпвлоап</div>
+                                        <div class="list-item-text phone">+79272339292</div>
+                                        <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="list-item-text number">№4</div>
+                                        <div class="list-item-text time">19:00</div>
+                                        <div class="list-item-text client">Валерий</div>
+                                        <div class="list-item-text phone">+79272339292</div>
+                                        <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
+                                    </div>
+                                    <div class="list-item">
+                                        <div class="list-item-text number">№4</div>
+                                        <div class="list-item-text time">19:00</div>
+                                        <div class="list-item-text client">Валерий</div>
+                                        <div class="list-item-text phone">+79272339292</div>
+                                        <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="container-booking">
-                <div class="box-tables-list">
-                    <div class="box-header">
-                        <p class="header-text">Список столов</p>
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="contactsf">
+                        <p class="contacts-text">ул. Московская, 122/126</p>
+                        <p class="contacts-text">+7(838)323-43-22</p>
                     </div>
-                    <div class="box-list">
-                        <div class="list-item">
-                            <div class="list-item-text number">№4</div>
-                            <div class="list-item-text time">19:00</div>
-                            <div class="list-item-text client">Валерий</div>
-                            <div class="list-item-text phone">+79272339292</div>
-                            <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
+                    <div class="download">
+                        <p class="contacts-text">Скачайте приложение</p>
+                        <div class="apps">
+                            <a href="" class="item"><img src="https://cdn-icons-png.flaticon.com/128/104/104089.png" width="40px" height="40px" alt=""></a>
+                        <a href="" class="item"><img src="https://cdn-icons-png.flaticon.com/128/831/831378.png" width="40px" height="40px" alt=""></a>
                         </div>
-                        <div class="list-item">
-                            <div class="list-item-text number">№4</div>
-                            <div class="list-item-text time">19:00</div>
-                            <div class="list-item-text client">Коларпвлрпвлоап</div>
-                            <div class="list-item-text phone">+79272339292</div>
-                            <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
-                        </div>
-                        <div class="list-item">
-                            <div class="list-item-text number">№4</div>
-                            <div class="list-item-text time">19:00</div>
-                            <div class="list-item-text client">Валерий</div>
-                            <div class="list-item-text phone">+79272339292</div>
-                            <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
-                        </div>
-                        <div class="list-item">
-                            <div class="list-item-text number">№4</div>
-                            <div class="list-item-text time">19:00</div>
-                            <div class="list-item-text client">Валерий</div>
-                            <div class="list-item-text phone">+79272339292</div>
-                            <button class="list-item-btn list-item-btn__delete-btn admin-delete-popup-open-btn">Удалить</button>
-                        </div>
+                    </div>
+                    <div class="social">
+                        <a href="" class="item"><img src="https://cdn-icons-png.flaticon.com/128/2111/2111828.png" width="40px" height="40px" alt=""></a>
+                        <a href="" class="item"><img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" width="40px" height="40px" alt=""></a>
+                        <a href="" class="item"><img src="https://cdn-icons-png.flaticon.com/128/1077/1077041.png" width="40px" height="40px" alt=""></a>
                     </div>
                 </div>
-            </div>
+            </footer>
         </div>
-    </div>
+    </div>   
 
     <div id="admin-edit-popup" class="popup popup__admin-edit-popup">
         <div class="popup-body popup-body__admin-edit-popup">
@@ -69,9 +104,9 @@
                 </div>
             </div>
         </div>
-     </div>   
+     </div>
 
-     <div id="admin-create-popup" class="popup popup__admin-create-popup">
+     <!-- <div id="admin-create-popup" class="popup popup__admin-create-popup">
         <div class="popup-body popup-body__admin-create-popup">
             <div class="popup-content">
                 <div class="popup-title">Выберите дату и время визита:</div>
@@ -85,7 +120,7 @@
                 </div>
             </div>
         </div>
-     </div> 
+     </div>  -->
 
      <div id="admin-delete-popup" class="popup popup__admin-delete-popup">
         <div class="popup-body popup-body__admin-delete-popup">
@@ -98,6 +133,21 @@
             </div>
         </div>
      </div> 
+
+     <div id="date-popup" class="popup popup__date-popup">
+        <div class="popup-body popup-body__date-popup">
+            <div class="popup-content">
+                <div class="popup-title">Выберите дату:</div>
+                <div class="input-form">
+                    <input type="date" id="date" class="input-form-date-value" value="2022-12-20" min="2022-11-17" max="2022-12-31">
+                </div>
+                <div class="popup-сontent-buttons">
+                    <button class="content-button close-btn close-btn__date-popup">Закрыть</button>
+                    <button class="content-button submit-btn submit-btn___date-popup" type="submit">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+    </div> 
 
      <script src="node_modules\jquery\dist\jquery.min.js"></script>
 <script src="adminScript.js"></script>

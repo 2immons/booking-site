@@ -1,31 +1,21 @@
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-weight: normal;
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
 }
 
+html,
 body {
-    /*background-image: url(https://images.wallpaperscraft.com/image/single/restaurant_cafe_appliances_tables_chairs_interior_design_39216_1920x1080.jpg);
-    background-attachment: fixed;*/
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    width: 100vw;
     overflow-x: hidden;
 }
 
 body._inactive {
     overflow-y: hidden;
 }
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    min-height: 100%;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    text-size-adjust: 100%;
-}
-
 
 body::-webkit-scrollbar {
     width: 8px;
@@ -40,35 +30,87 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
-.content-section{
+.wrapper{
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.main{
+    
+    flex: 1 1 auto;
+    margin-left: 20%;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    margin-left: 20%;
 }
 
 .container{
-    height: 100vh;
-    min-height: 580px;
-    display: flex;
-    justify-content: center;
-
+    max-width: 1200px;
+    padding: 0px 15px;
+    margin: 0 auto;
 }
 
-    .container__header{
-        /* background: rgb(218,197,168);
-        background: linear-gradient(170deg, rgba(218,197,168,1) 0%, rgba(240,220,192,1) 100%); */
+.main-header{
+    height: 100vh;
+    max-height: 1060px;
+    background-image: url("bimg.jpg");
+}
 
-        background-image: url(https://images.wallpaperscraft.com/image/single/restaurant_cafe_appliances_tables_chairs_interior_design_39216_1920x1080.jpg);
-        background-attachment: fixed;
-    }
+.main-header__background-image{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* filter: blur(3px) brightness(40%); */
+    backdrop-filter: blur(3px) brightness(45%);
+}
+    
+.main-header__header-wrapper{
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+}
 
-    .container__about-us{
-        background: rgb(236,221,201);
+.main-header__header-text{
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 90px;
+    font-weight: 500;
+    text-shadow: 3px 3px 3px #000000;
+    color: white;
+}
+
+hr {
+    color: rgb(252, 0, 0);
+    border: none;
+    border-top: 3px solid black;
+    text-align: center;
+    height: 10px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+}
+
+.section{
+    height: 100vh;
+    min-height: 900px;
+    max-height: 1060px;
+    display: flex;
+    justify-content: center;
+}
+
+    .section--about-us{
         background: linear-gradient(125deg, rgba(236,221,201,1) 0%, rgba(246,238,229,1) 40%, rgba(255,255,255,1) 100%);
     }
 
-    .container__about-kitchen{
-        background: #f6eee5;
+    .section--about-kitchen{
+        background: linear-gradient(125deg, rgba(236,221,201,1) 0%, rgba(246,238,229,1) 40%, rgba(255,255,255,1) 100%);
     }
 
     .footer{
@@ -76,86 +118,67 @@ body::-webkit-scrollbar-thumb {
         background-color: rgba(17, 17, 16, 0.829);
     }
 
-.header-wrapper{
-    backdrop-filter: blur(3px) brightness(45%);
+.section__header{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    height: 150px;
 }
 
-.header-wrapper-text{
-    text-align: center;
-    font-family: "Montserrat", sans-serif;
-    font-size: 90px;
-    font-weight: 500;
-    text-shadow: 3px 3px 3px #000000;
-    /* color: #2c2c2c; */
-    color: white;
-    width: 70%;
-}
-
-
-.box{
-    margin-left: 10%;
-    margin-right: 10%;
-    display: flex;
-    flex-direction: column;
-}
-
-.box-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 20vh;
-    min-height: 120px;
-}
-
-    .header-text{
-        text-align: center;
+    .section__header-text{
         font-family: "Montserrat", sans-serif;
-        font-size: 80px;
-        letter-spacing: 5px;
-        text-decoration-thickness: 2px;
-        text-decoration: underline;
+        text-align: center;
+        font-size: 60px;
+        letter-spacing: 2px;
+        text-decoration-line: underline;
+        text-decoration-thickness: 3px;
         font-weight: 500;
         color: #2c2c2c;
     }
 
-.box-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 80vh;
-    min-height: 450px;
+.section__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-    .text-wrapper{
+    .section__content-text-wrapper{
         display: flex;
         justify-content: center;
-    }
-
-    .info-image{
-        display: flex;
         align-items: center;
+    }
+        .text{
+            font-family: "Montserrat", sans-serif;
+            width: 100%;
+            color: black;
+            font-size: 22px;
+            text-decoration: none;
+            font-weight: 500;
+            line-height: 30px;
+            text-align: center;
+        }
+
+    .section__content-img-wrapper{
+        display: flex;
         justify-content: center;
+        align-items: center;
+        width: 500px;
+        height: 500px;
     }
 
-.text{
-    font-family: "Montserrat", sans-serif;
-    max-width: 900px;
-    /* color: rgb(39, 38, 38); */
-    color: black;
-    font-size: 22px;
-    text-decoration: none;
-    text-align: center;
-    font-weight: 500;
-    line-height: 30px;
-}
+        .info-img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            float: left;
+            border-radius: 50%;
+        }
 
-.container__photo-slider{
+.section--photo-slider{
     height: auto;
     display: flex;
     min-height: 775px;
@@ -168,11 +191,11 @@ body::-webkit-scrollbar-thumb {
     flex-direction: column;
 }
 
-.header-text__photo-slider{
+.section__header-text--photo-slider{
     color: white;
 }
 
-.slider-wrapper{
+.section-content__slider-wrapper{
     display: flex;
     flex-direction: row;
     height: 80%;
@@ -208,60 +231,118 @@ body::-webkit-scrollbar-thumb {
     transform: scale(1.1);
 }
 
-@media(max-width: 1500px) {
-    .container__about-us{
-        background: #f6eee5;
+@media (max-width: 1280px) {
+    .main{
+        width: 100%;
+        margin: 0;
     }
 
-    .container__about-kitchen{
-        background: #f6eee5;
+    .container{
+        max-width: 1000px;
     }
+}
 
-    .about-us-content{
-        flex-direction: column;
+@media (max-width: 1100px) {
+    .section--photo-slider{
+        display: none;
     }
-     
-    .image__about-us{
+    .section--about-kitchen, .section--about-us{
+        background: rgb(252, 244, 235);
+    }
+    .container{
+        max-width: 970px;
+    }
+}
+
+@media (max-width: 970px) {
+    .section__content{
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        row-gap: 50px;
     }
 
-    .footer{
-        margin-left: 0%;
+    .section__content-img-wrapper{
+        scale: 0.8;
+    }
+
+    .container{
+        max-width: 700px;
+    }
+
+    .section{
+        min-height: 900px;
+    }
+
+    .section__header{
+        height: 100px;
+    }
+
+    .section__header-text{
+        font-size: 40px;
     }
 }
 
-@media (max-width: 1208px) {
-    .content-section{
-        margin-left: 0%;
-        margin-right: 0%;
+@media (max-width: 560px) {
+    .section__content-img-wrapper{
+        scale: 0.8;
     }
-    .footer{
-        margin-left: 0%;
+
+    .main-header__header-text{
+        font-size: 60px;
+    }
+
+    .text{
+        font-size: 18px;
+    }
+
+    .section__content{
+        row-gap: 5px;
+    }
+    .container{
+        max-width: 510px;
     }
 }
 
-@media (max-width: 980px) {
-    .container__photo-slider{
-        display: none;
+@media (max-width: 510px) {
+    .section__content-img-wrapper{
+        scale: 0.65;
+    }
+
+    .text{
+        font-size: 18px;
+    }
+
+    .section__content{
+        row-gap: 5px;
+    }
+    .container{
+        max-width: 320px;
+    }
+
+    .section{
+        min-height: 1000px;
+    }
+
+    .main-header__header-text{
+        font-size: 55px;
+    }
+
+    .section__header-text--booking{
+        font-size: 30px;
     }
 }
 
-@media (max-width: 660px) {
-    .info-image, .container__photo-slider{
-        display: none;
+@media (max-width: 320px) {
+    .section__content-img-wrapper{
+        scale: 0.5;
     }
 
-    .box{
-        justify-content: center;
+    .container{
+        max-width: 250px;
     }
 
-    .box-header{
-        height: 50%;
-    }
-
-    .box-content{
-        height: 50%;
+    .text{
+        font-size: 14px;
     }
 }
 
@@ -272,9 +353,6 @@ body::-webkit-scrollbar-thumb {
     align-items: center;
     margin-left: 3%;
     margin-right: 3%;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    height: 90%;
 }
 
 .contacts-text{
@@ -309,26 +387,13 @@ body::-webkit-scrollbar-thumb {
 
 
 
-
-.container__booking{
-    background: rgb(236,221,201);
-    background: linear-gradient(125deg, rgba(236,221,201,1) 0%, rgba(246,238,229,1) 40%, rgba(255,255,255,1) 100%);
-    min-height: 860px;
+.section--booking{
+    min-height: 1000px;
 }
 
-.box__booking{
-    height: 100%;
-    display: flex;
+.section__content--booking{
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.box-content__booking{
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
 }
 
 .errors{
@@ -374,6 +439,7 @@ body::-webkit-scrollbar-thumb {
 
 .input-form-button-wrapper{
     display: flex;
+    width: 50%;
     justify-content: center;
 }
 
@@ -385,6 +451,13 @@ body::-webkit-scrollbar-thumb {
     height: 60px;
     font-size: 30px;
     transition: 0.1s linear;
+}
+
+
+@media (max-width: 510px) {
+    .date-popup-open-btn{
+        font-size: 20px;
+    }
 }
 
 .date-popup-open-btn:hover{
@@ -452,6 +525,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .popup-content{
+    margin: 10px;
     padding: 30px;
     border-radius: 40px;
     height: 200px;
@@ -464,6 +538,7 @@ body::-webkit-scrollbar-thumb {
 .popup-title{
     font-size: 40px;
     font-family: "Montserrat", sans-serif;
+    text-align: center;
     font-weight: 500;
 }
 
