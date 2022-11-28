@@ -2,6 +2,7 @@ let loginBtn = $('.login-form-open-btn');
 let regBtn = $('.register-form-open-btn');
 
 $(document).on("click", function(e){
+   console.log(e.target);
    if(loginBtn.is(e.target)){
       document.querySelector('.side-menu__login-form').style.display = "flex";
       document.querySelector('.side-menu__login-form').style.flexDirection = "column";

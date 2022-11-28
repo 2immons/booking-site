@@ -1,19 +1,18 @@
-let loginBtn = $('.login-button');
-let regBtn = $('.create-account-button');
+let loginBtn = $('.login-form-open-btn');
+let regBtn = $('.register-form-open-btn');
 
 $(document).on("click", function(e){
+   console.log(e.target);
    if(loginBtn.is(e.target)){
-      document.getElementById('login-form').style.display = "flex";
-      document.getElementById('login-form').style.flexDirection = "column";
-      document.getElementById('register-form').style.display = "none"
+      document.querySelector('.side-menu__login-form').style.display = "flex";
+      document.querySelector('.side-menu__login-form').style.flexDirection = "column";
+      document.querySelector('.side-menu__register-form').style.display = "none"
    }
-})
 
-$(document).on("click", function(e){
    if(regBtn.is(e.target)){
-      document.getElementById('register-form').style.display = "flex";
-      document.getElementById('register-form').style.flexDirection = "column";
-      document.getElementById('login-form').style.display = "none"
+      document.querySelector('.side-menu__register-form').style.display = "flex";
+      document.querySelector('.side-menu__register-form').style.flexDirection = "column";
+      document.querySelector('.side-menu__login-form').style.display = "none"
    }
 })
 
