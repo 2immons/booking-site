@@ -1,4 +1,4 @@
-// модал удаления админки
+// модал даты админки
 let dcloseBtn = $('.close-btn__date-popup');
 let dopenBtn = $('.date-popup-open-btn');
 let dsubmitBtn = $('.submit-btn___date-popup');
@@ -55,22 +55,22 @@ $(document).on("click", function(e){
 //    }
 // })
 
-// модал
-let delcloseBtn = $('.close-btn__admin-delete-popup');
-let delopenBtn = $('.admin-delete-popup-open-btn');
-let delsubmitBtn = $('.submit-btn___admin-delete-popup');
-let delpopupBody = $('.popup-body__admin-delete-popup');
-let delpopup = $('.popup__admin-delete-popup');
+// // модал
+// let delcloseBtn = $('.close-btn__admin-delete-popup');
+// let delopenBtn = $('.admin-delete-popup-open-btn');
+// let delsubmitBtn = $('.submit-btn___admin-delete-popup');
+// let delpopupBody = $('.popup-body__admin-delete-popup');
+// let delpopup = $('.popup__admin-delete-popup');
 
-$(document).on("click", function(e){
-   console.log(e.target);
-   if (delcloseBtn.is(e.target)) {
-      delpopup.removeClass('_active');
-   }
-   if (delsubmitBtn.is(e.target) || (delpopupBody.is(e.target))) {
-      delpopup.removeClass('_active');
-   }
-   if (dopenBtn.is(e.target)) {
-      delpopup.addClass('_active');
-   }
-})
+// $(document).on("click", function(e){
+//    console.log(e.target);
+//    if (delcloseBtn.is(e.target)) {
+//       delpopup.removeClass('_active');
+//    }
+//    if (delsubmitBtn.is(e.target) || (delpopupBody.is(e.target))) {
+//       delpopup.removeClass('_active');
+//    }
+//    if (dopenBtn.is(e.target)) {
+//       delpopup.addClass('_active');
+//    }
+// })
